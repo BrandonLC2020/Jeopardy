@@ -7,5 +7,5 @@ import java.util.ArrayList;
 
 public class Grid extends JPanel {
 
-    public ArrayList
+    public ArrayList<Category> grid;
 }
