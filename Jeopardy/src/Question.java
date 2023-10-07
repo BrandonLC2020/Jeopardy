@@ -6,6 +6,14 @@ public class Question {
 
     private int points;
 
+    public Question(String question, String answer, int points) {
+        this.question = question;
+        this.answer = answer;
+        this.category = "";
+        this.points = points;
+    }
+
+
     public Question(String question, String answer, String category, int points) {
         this.question = question;
         this.answer = answer;
@@ -16,8 +24,6 @@ public class Question {
     public String getQuestion() {
         return this.question;
     }
-
-
 
     public String getAnswer() {
         return this.answer;

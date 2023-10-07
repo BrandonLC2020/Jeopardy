@@ -9,11 +9,14 @@ public class Category {
     private Map<Integer, Question> pointsToQuestions;
     private Question[] questions;
 
+    private String name;
+
     public final int numQuestions = 5;
 
     //public Integer[] pointValues = new Integer[]{100, 200, 300, 400, 500};
 
-    public Category(Question[] questions) throws Exception {
+    public Category(String name, Question[] questions) throws Exception {
+        this.name = name;
         this.questions = questions;
         if (questions.length != numQuestions) throw new Exception();
         this.pointsToQuestions = new HashMap<Integer, Question>();
@@ -22,6 +25,11 @@ public class Category {
         }
     }
 
+    public String getName() {
+        return this.name;
+    }
 
-
+    public Question[] getQuestions() {
+        return this.questions;
+    }
 }
