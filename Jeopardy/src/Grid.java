@@ -9,13 +9,10 @@ import java.util.Map;
 
 public class Grid extends JPanel {
 
-    public ArrayList<GridSpace[]> grid;
-
     public Map<String, Map<Integer, Question>> allQuestionsMap;
 
     public Grid(ArrayList<Category> categories) {
         super();
-        grid = new ArrayList<GridSpace[]>();
         allQuestionsMap = new HashMap<String, Map<Integer, Question>>();
         loadQuestions(categories);
         fillGrid();

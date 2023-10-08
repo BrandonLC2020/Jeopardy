@@ -12,6 +12,8 @@ public class GridSpace extends JAButton{
         this.setFont(buttonFont);
         this.setForeground(Color.WHITE);
         this.setBackground(Color.BLUE);
+        this.setOpaque(true);
+        this.setBorderPainted(false);
         this.revalidate();
     }
     public GridSpace(Question question) {
@@ -27,6 +29,14 @@ public class GridSpace extends JAButton{
     }
     public boolean hasBeenSelected() {
         return this.selected;
+    }
+
+    public Question getQuestion() {
+        return this.question;
+    }
+
+    public void setSelected(boolean val) {
+        this.selected = val;
     }
 
     public Jeopardy.Action getActionType() {
